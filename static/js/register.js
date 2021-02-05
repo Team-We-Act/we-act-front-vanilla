@@ -1,6 +1,6 @@
 
 window.onload = function(){
-  var savedVal = 0;
+  var savedVal = '';
   let volunteer_card = document.getElementById('volunteer-card');
   let recipient_card = document.getElementById('recipient-card');
   let next_button = document.getElementById('next-button');
@@ -34,5 +34,9 @@ window.onload = function(){
       }
       next_button.disabled = false;
 
+  });
+
+  $('#next-button').on('click', function(){
+    location.href = './register_form_' + savedVal + '.html'
   });
 }
