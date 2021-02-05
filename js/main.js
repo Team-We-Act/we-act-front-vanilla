@@ -1,6 +1,6 @@
 window.onload = () => {
     "use strict";
-  
+    // if (!(n.serviceWorker && (typeof Cache !== 'undefined' && Cache.prototype.addAll))) return; 
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("/sw.js");
       console.log('aaa')
