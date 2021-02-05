@@ -1,78 +1,5 @@
 // import axios from 'axios'
-// Vue.component('class-page', {
-//     template:`
-//     <div class="row">
-//           <div class="col-xs-12">
 
-//           </div>
-//           <div class="col-xs-12">
-//               <div>
-//                   <h3>내 클래스.</h3>
-//                   <div>
-//                       <input v-model="index"/>
-//                       <input v-model="name"/>
-//                       <input v-model="explain"/>
-//                       <button v-on:click="createLec">강의 업로드</button>
-//                   </div>
-//               </div>
-//               <div>
-//                   <div v-for="lecture in lectures" >
-//                     <div>
-//                       <div>
-//                           {{lecture.index}}번째 강의,
-//                       </div>
-//                       <div>
-//                           {{lecture.name}}
-              
-//                       </div>
-//                       <p>
-//                           {{lecture.explain}}
-//                       </p>
-//                   </div>
-//                 </div>
-//               </div>
-//           </div>
-//       </div>`,
-//     methods:{
-//         createLec:function(){
-//             var obj={
-//                 'index':this.index,
-//                 'name':this.name,
-//                 'explain':this.explain
-//             }
-//             // axios.post("url주소",{
-//             //     obj
-//             // },[,config])
-//             this.lectures.push(obj)
-//         }
-//     },
-//     data:{
-//         "index":'',
-//         'name':'',
-//         'explain':'',
-//         'lectures':[]
-//     },
-//     watch:{
-//         lectures:function(a,b){
-//             return a.index<b.index ? -1 : a.index>b.index ? 1 : 0
-//         }
-//     }
-// });
-
-
-
-// new Vue ({
-//     el:'#app',
-//     components:{
-//         'class-lecture':lecture
-//     },
-    
-//     methods:{
-//         createLec:function(){
-            
-//         }
-//     }
-// });
 
 
 
@@ -84,6 +11,7 @@
     template: 
     `<div class="row">
           <div class="col-md-2">
+          <nav-bar></nav-bar>
             <div></div>
             <h3>전국 클래스 목록</h3>
             <div></div>
@@ -171,25 +99,12 @@
     }
   });
 
-// var lecture={
-//     template:
-//     `<div>
-//         <div>
-//             {{}}번째 강의,
-//         </div>
-//         <div>
-//             {{}}
 
-//         </div>
-//         <p>
-//             {{}}
-//         </p>
-//     </div>`
-//     ,
-    
-// }
 Vue.component('class-lecture',{
     props:['lecture'],
+    children:[
+        {name:'nav-bar'}
+    ],
     template:`<div>
     <div v-on:click="test">{{lecture.index}}번째 강의,
         <div>{{lecture.lecturename}}</div>
@@ -207,4 +122,31 @@ Vue.component('class-lecture',{
         }
     }
       
+})
+
+Vue.component('nav-bar',{
+    template:`
+    <div class="col-md-2">
+            <div></div>
+            <h3>전국 클래스 목록</h3>
+            <div></div>
+            <div>
+                <button></button>
+            </div>
+            <div>
+                <h5>인도</h5>
+                <h6>쉽게 배우는 웹프로그래밍</h6>
+                <h6>기초부터 시작하는 고등 수학</h6>
+            </div>
+            <div>
+                <h5>필리핀</h5>
+                <h6>쉽게 배우는 미적분학</h6>
+                <h6>기초부터 시작하는 고등 수학</h6>
+            </div>
+            <div>
+                <h5>캄보디아</h5>
+                <h6>쉽게 배우는 웹프로그래밍</h6>
+                <h6>기초부터 시작하는 고등 수학</h6>
+            </div>
+          </div>`
 })
