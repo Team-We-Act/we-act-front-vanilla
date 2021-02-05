@@ -1,5 +1,5 @@
 let cacheName = "my-first-pwa";
-let contentToCache = ["/classPage.html"];
+let contentToCache = ["/index.html"];
 
 
 console.log('bbbb')

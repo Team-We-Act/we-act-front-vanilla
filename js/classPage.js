@@ -1,32 +1,32 @@
 // import axios from 'axios'
 
-Vue.component('nav-bar',{
-    // name:'navbar',
-    template:`
-    <div class="col-md-2">
-            <div></div>
-            <h3>전국 클래스 목록</h3>
-            <div></div>
-            <div>
-                <button></button>
-            </div>
-            <div>
-                <h5>인도</h5>
-                <h6>쉽게 배우는 웹프로그래밍</h6>
-                <h6>기초부터 시작하는 고등 수학</h6>
-            </div>
-            <div>
-                <h5>필리핀</h5>
-                <h6>쉽게 배우는 미적분학</h6>
-                <h6>기초부터 시작하는 고등 수학</h6>
-            </div>
-            <div>
-                <h5>캄보디아</h5>
-                <h6>쉽게 배우는 웹프로그래밍</h6>
-                <h6>기초부터 시작하는 고등 수학</h6>
-            </div>
-          </div>`
-})
+// Vue.component('nav-bar',{
+//     // name:'navbar',
+//     template:`
+//     <div class="col-md-2">
+//             <div></div>
+//             <h3>전국 클래스 목록</h3>
+//             <div></div>
+//             <div>
+//                 <button></button>
+//             </div>
+//             <div>
+//                 <h5>인도</h5>
+//                 <h6>쉽게 배우는 웹프로그래밍</h6>
+//                 <h6>기초부터 시작하는 고등 수학</h6>
+//             </div>
+//             <div>
+//                 <h5>필리핀</h5>
+//                 <h6>쉽게 배우는 미적분학</h6>
+//                 <h6>기초부터 시작하는 고등 수학</h6>
+//             </div>
+//             <div>
+//                 <h5>캄보디아</h5>
+//                 <h6>쉽게 배우는 웹프로그래밍</h6>
+//                 <h6>기초부터 시작하는 고등 수학</h6>
+//             </div>
+//           </div>`
+// })
 
 
 
@@ -35,13 +35,13 @@ Vue.component('nav-bar',{
   Vue.component('child-component', {
     props: ['propsdata'],
     
-    components:{
-        'nav-bar':nav-bar
-    },
+    // components:{
+    //     'nav-bar':nav-bar
+    // },
     template: 
     `<div class="row">
           <div class="col-md-2">
-          <nav-bar></nav-bar>
+          
             <div></div>
             <h3>전국 클래스 목록</h3>
             <div></div>
@@ -67,12 +67,45 @@ Vue.component('nav-bar',{
           <div class="col-md-10">
               <div>
                   <span></span>
-                  <h3>내 클래스.</h3>
+                  <h3>내 클래스</h3>
                   <div>
-                      <input v-model="index"/>
-                      <input v-model="lecturename"/>
-                      <input v-model="explain"/>
-                      <button v-on:click="createLec">강의 업로드</button>
+                      
+                      
+                      
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">강의 업로드</button>
+                  </div>
+                  
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                          <button v-on:click="close" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <form>
+                            <div class="form-group">
+                              <label for="recipient-name" class="col-form-label">강의 제목</label>
+                              <input v-model="lecturename" type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="form-group">
+                              
+                              <input type="file" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="form-group">
+                              <label for="message-text" class="col-form-label">강의 내용</label>
+                              <textarea v-model="explain" class="form-control" id="message-text"></textarea>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button v-on:click="close" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button data-dismiss="modal" v-on:click="createLec" type="button" class="btn btn-primary">확인</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
               </div>
               <div class="row">
@@ -87,9 +120,11 @@ Vue.component('nav-bar',{
       ,
           methods:{
         createLec:function(){
+            this.showModal=true
             console.log('bbbbb')
+            var index=this.lectures.length
             var obj={
-                'index':this.index,
+                'index':index,
                 'lecturename':this.lecturename,
                 'explain':this.explain
             }
@@ -99,14 +134,22 @@ Vue.component('nav-bar',{
             console.log(this)
             this.lectures.push(obj)
             console.log(this.lectures)
+            this.lecturename=''
+            this.explain=''
+        },
+        close:function(){
+            this.showModal=false
+            this.lecturename=''
+            this.explain=''
         }
     },
     data:function(){
         return {
-            index:'',
+            
         lecturename:'',
         explain:'',
-        lectures:[]}
+        lectures:[],
+        showModal:false}
     },
     watch:{
         lectures:function(a,b){
