@@ -65,54 +65,76 @@
             </div>
           </div>
           <div class="col-md-10">
-              <div>
-                  <span></span>
-                  <h3>내 클래스</h3>
-                  <div>
-                      
-                      
-                      
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">강의 업로드</button>
-                  </div>
-                  
-                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="container">
+                
+                <div class="logo-wrapper">
+                    <img src="assets/logo.png"/>
+                </div>
+                <h3 class="myclass">내 클래스</h3>
+                <div class="row">
+                    <div class="picture-sec col-md-1">
+                        <div class="img-wrapper">
+                            <img src="assets/profile.png"/>
+                        </div>
+                    </div>
+                    <div class="profile-sec col-md-9">
+                        <div class="info-sec">
+                            <span>클래스 번호:{{}}</span>
+                            <span>언어:{{}}</span>
+                            <span>기간:{{}}</span>
+                        </div>
+                        <div class="intro-sec">
+                            <span>안녕하세요. 저는 현재 위액트와 함께 캄보디아에서 활동하는 코딩분야 봉사자입니다.</span>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        
+                        
+                        
+                        <button type="button" class="btn upload-btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">강의 업로드</button>
+                    </div>
+                </div>
+                    
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
-                      <div class="modal-content">
+                    <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">강의 생성</h5>
-                          <button v-on:click="close" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <h5 class="modal-title" id="exampleModalLabel">강의 생성</h5>
+                        <button v-on:click="close" type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
-                          </button>
+                        </button>
                         </div>
                         <div class="modal-body">
-                          <form>
+                        <form>
                             <div class="form-group">
-                              <label for="recipient-name" class="col-form-label">강의 제목</label>
-                              <input v-model="lecturename" type="text" class="form-control" id="recipient-name">
+                            <label for="recipient-name" class="col-form-label">강의 제목</label>
+                            <input v-model="lecturename" type="text" class="form-control" id="recipient-name">
                             </div>
                             <div class="form-group">
-                              
-                              <input type="file" class="form-control" id="recipient-name">
+                            
+                            <input type="file" class="form-control" id="recipient-name">
                             </div>
                             <div class="form-group">
-                              <label for="message-text" class="col-form-label">강의 내용</label>
-                              <textarea v-model="explain" class="form-control" id="message-text"></textarea>
+                            <label for="message-text" class="col-form-label">강의 내용</label>
+                            <textarea v-model="explain" class="form-control" id="message-text"></textarea>
                             </div>
-                          </form>
+                        </form>
                         </div>
                         <div class="modal-footer">
-                          <button v-on:click="close" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button data-dismiss="modal" v-on:click="createLec" type="button" class="btn btn-primary">확인</button>
+                        <button v-on:click="close" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button data-dismiss="modal" v-on:click="createLec" type="button" class="btn btn-primary">확인</button>
                         </div>
-                      </div>
                     </div>
-                  </div>
-              </div>
-              <div class="row">
-                    
-                  <div class="col-md-4" v-for="lecture in lectures" >
-                    <class-lecture v-bind:lecture="lecture"></class-lecture>
-                    
+                    </div>
+                </div>
+                
+                <div class="row">
+                        
+                    <div class="col-md-4" v-for="lecture in lectures" >
+                        <class-lecture v-bind:lecture="lecture"></class-lecture>
+                        
+                    </div>
                 </div>
               </div>
           </div>
