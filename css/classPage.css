@@ -1,0 +1,6 @@
+.lecture-wrapper{margin-top:5vw;position:relative ;background-color: #f6f6f6;padding-bottom: 95%;border-radius: 20px;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);}
+.inner-wrapper{position:absolute;width:100%;height:100%;}
+.lecture-wrapper .index{padding:25px;font-size:20px;}
+.lecturename{padding:25px;font-size:20px;}
+.explain{padding:25px;position:absolute;bottom:10px;font-size:15px;}
+.bold{font-weight: 700;}
