@@ -88,7 +88,6 @@ body {
 #login-button:disabled {
   background: #e4e4e4;
   cursor: not-allowed;
-
 }
 
 .active-button {
