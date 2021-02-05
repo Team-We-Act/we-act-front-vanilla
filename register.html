@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Missing Semester</title>
+    <title>We Act</title>
     <link rel="stylesheet" media="screen and (min-width: 500px)" href="./static/css/register.css">
     <link rel="stylesheet" media="screen and (max-width: 499px)" href="./static/css/reigster_small.css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -14,25 +14,29 @@
   </head>
   <body>
     <div id = "flex-container">
-      <img id="logo" src="./assets/logo.png">
+      <a href="/index.html"><img id="logo" src="./assets/logo.png"></a>
       <div id = "register-card-section">
-        <div class="mdc-card mdc-card-intro passive-card">
-          <div class=mdc-card__media--square">
-            <img src="./assets/volunteer.png" class="image-for-mdc-card-intro">
+        <div class="mdc-card mdc-card-intro passive-card" id="volunteer-card">
+          <div class="mdc-card__media--square">
+            <img src="./assets/volunteer.png" class="image-for-mdc-card-intro" id="volunteer-card__image">
           </div>
           <div class="mdc-card__content exp-mdc-card-intro">
             봉사자
           </div>
         </div>
-        <div class="mdc-card mdc-card-intro passive-card">
-          <div class=mdc-card__media--square">
-            <img src="./assets/recipient.png" class="image-for-mdc-card-intro">
+        <div class="mdc-card mdc-card-intro passive-card" id = "recipient-card">
+          <div class= "mdc-card__media--square">
+            <img src="./assets/recipient.png" class="image-for-mdc-card-intro" id="recipient-card__image">
           </div>
           <div class="mdc-card__content exp-mdc-card-intro">
             수혜자
           </div>
         </div>
       </div>
+      <button id ="next-button" class="mdc-button mdc-button--raised material-button" onclick="location.href='./register_form.html'" disabled>
+        <span class="mdc-button__ripple"></span>
+        <span class="mdc-button__label" id="next-button__label">다음</span>
+      </button>
     </div>
   </body>
 </html>
