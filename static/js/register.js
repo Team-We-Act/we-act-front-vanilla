@@ -1,6 +1,7 @@
-var savedVal = 0;
 
 window.onload = function(){
+  var savedVal = 0;
+
   $('#volunteer-card').on('click', function(){
     savedVal=1;
     let volunteer_card = document.getElementById('volunteer-card')
