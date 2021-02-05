@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>Vue Local and Global Components</title>
+  </head>
+  <body>
+    <div id="app">
+        <child-component v-bind:propsdata="message"></child-component>
+      <h3>첫 번째 인스턴스 영역</h3>
+      <class-page inline-template>
+        <div class="row">
+          <div class="col-xs-12">
+
+          </div>
+          <div class="col-xs-12">
+              <div>
+                  <h3>내 클래스.</h3>
+                  <div>
+                      <input v-model="index"/>
+                      <input v-model="name"/>
+                      <input v-model="explain"/>
+                      <button v-on:click="createLec">강의 업로드</button>
+                  </div>
+              </div>
+              <div>
+                  <div v-for="lecture in lectures" >
+                    <div>
+                      <div>
+                          {{lecture.index}}번째 강의,
+                      </div>
+                      <div>
+                          {{lecture.name}}
+              
+                      </div>
+                      <p>
+                          {{lecture.explain}}
+                      </p>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+      </class-page>
+     
+    </div>
+    <div id="app2">
+      <my-global-component inline-template></my-global-component>
+      <my-local-component></my-local-component>
+     </div> 
+    <hr>
+    
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <script src="js/test.js"></script>
+    <!-- <script src="js/classPage.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script>
+      
+    </script>
+  </body>
+</html>

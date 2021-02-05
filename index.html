@@ -10,6 +10,14 @@
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="white" />
     <link rel="apple-touch-icon" href="assets/pwa-icon-256.png" />
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+
+
   </head>
   <body>
     <div id="title-container">
@@ -27,10 +35,16 @@
         <span id = "register-text" onclick="location.href='./register.html'">회원가입</span>
       </div>
     </div>
-    <script src="/js/main.js"></script>
->
-      </div>
+    <div id="app">
+      <my-global-component></my-global-component>
     </div>
-
+    <script src="/js/main.js"></script>
+    <script src="/js/test.js"></script> 
+    
+    <script src="js/classPage.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/4.0.0/vuex.cjs.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   </body>
 </html>
