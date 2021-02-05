@@ -16,11 +16,11 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 952px;
   height: 582px;
   padding: 0px 124px;
   background-color: #ffffff;
-  border
+  width: 700px;
+  border-radius: 0 296 0 0;
 }
 
 .logo {
