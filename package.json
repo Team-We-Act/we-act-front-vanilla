@@ -1,0 +1,23 @@
+{
+  "name": "we-act-front-vanilla",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Team-We-Act/we-act-front-vanilla.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Team-We-Act/we-act-front-vanilla/issues"
+  },
+  "homepage": "https://github.com/Team-We-Act/we-act-front-vanilla#readme",
+  "dependencies": {
+    "serve": "^11.3.2"
+  }
+}
