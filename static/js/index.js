@@ -1,10 +1,10 @@
-window.onload = function(){
+  window.onload = function(){
   $('#enter-magic-code').on('input', function(){
     let text = document.getElementById('enter-magic-code').value;
     let login_button =  document.getElementById("login-button");
-    console.log(text);
+    //console.log(text);
     if (text == '') {
-      console.log('empty');
+      //console.log('empty');
       if (login_button.classList.contains('active-button'))
         login_button.classList.remove("active-button");
       login_button.classList.add('passive-button');

@@ -14,9 +14,9 @@
   </head>
   <body>
     <div id = "flex-container">
-      <img id="logo" src="./assets/logo.png">
+      <a href="/index.html"><img id="logo" src="./assets/logo.png"></a>
       <div id = "register-card-section">
-        <div class="mdc-card mdc-card-intro passive-card">
+        <div class="mdc-card mdc-card-intro passive-card" id="volunteer-card">
           <div class=mdc-card__media--square">
             <img src="./assets/volunteer.png" class="image-for-mdc-card-intro">
           </div>
@@ -33,6 +33,10 @@
           </div>
         </div>
       </div>
+      <button id ="next-button" class="mdc-button mdc-button--raised material-button" onclick="location.href='./register_form.html'" >
+        <span class="mdc-button__ripple"></span>
+        <span class="mdc-button__label" id="next-button__label">다음</span>
+      </button>
     </div>
   </body>
 </html>
