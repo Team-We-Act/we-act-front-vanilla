@@ -1,0 +1,62 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+:root {
+  --mdc-theme-primary: #ffffff;   /* Primary color theme */
+  font-family: 'NanumGothic';  /* Default font family */
+}
+
+body {
+  margin: 0px;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/background2@2x.png');
+  background-size: 100%;
+}
+
+#flex-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+}
+
+#logo {
+  width: 112px;
+  height: 36px;
+  margin: 93px auto;
+  object-fit: contain;
+}
+
+#register-card-section {
+  margin-top: 140px;
+  width: 620px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mdc-card-intro {
+  width:270px;
+  border-radius: 20px !important;
+}
+.passive-card {
+  background-color: #e4e4e4 !important;
+}
+
+.image-for-mdc-card-intro {
+  padding: 58px 49px 41px 49px;
+  width: px;
+}
+
+.exp-mdc-card-intro{
+  padding: 0px 8px 35px 8px;
+  font-size: 23px;
+  font-family: 'NanumGothic' !important;
+  text-align: center;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}

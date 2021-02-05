@@ -8,7 +8,7 @@
 body {
   margin: 0px;
   background-repeat: no-repeat;
-  background-image: url('./assets/background-main@3x.png');
+  background-image: url('../../assets/background-main@3x.png');
   background-size: 100%;
 }
 
@@ -19,8 +19,8 @@ body {
   height: 582px;
   padding: 0px 124px;
   background-color: #ffffff;
-  width: 700px;
-  border-radius: 0 296 0 0;
+  width: 900px;
+  border-radius: 0px 296px 0px 0px;
 }
 
 .logo {
@@ -48,7 +48,7 @@ body {
   margin: 100px 0 0 0;
 }
 
-#enter_magic_code {
+#enter-magic-code{
   width: 370px;
   height: 72px;
   padding: 22px 88px 25px 28px;
@@ -63,7 +63,7 @@ body {
 
 }
 
-#enter_magic_code::placeholder {
+#enter-magic-code::placeholder {
   font-family: NanumGothic;
   font-size: 22px;
   font-weight: normal;
@@ -76,8 +76,6 @@ body {
 }
 
 #login-button {
-  background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
-  box-shadow: 0 3px 5px 2px rgba(255, 105, 135, .3);
   width: 204px;
   height: 72px;
   margin: 0 0 0 20px;
@@ -87,10 +85,21 @@ body {
   outline: none;
 }
 
-#login-button:hover {
-  cursor: pointer;
+#login-button:disabled {
+  background: #e4e4e4;
+  cursor: not-allowed;
+
 }
 
+.active-button {
+  box-shadow: 0 3px 5px 2px rgba(255, 105, 135, .3);
+  background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
+}
+
+.active-button:hover {
+  cursor: pointer;
+
+}
 #login-button__label {
   line-height: 1.21;
   font-size: 24px;

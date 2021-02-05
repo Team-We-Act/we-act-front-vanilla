@@ -1,8 +1,8 @@
 <html>
   <head>
     <title>Missing Semester</title>
-    <link rel="stylesheet" media="screen and (min-width: 500px)" href="./index.css">
-    <link rel="stylesheet" media="screen and (max-width: 499px)" href="./index_small.css">
+    <link rel="stylesheet" media="screen and (min-width: 500px)" href="./static/css/index.css">
+    <link rel="stylesheet" media="screen and (max-width: 499px)" href="./static/css/index_small.css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -11,15 +11,15 @@
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="white" />
     <link rel="apple-touch-icon" href="assets/pwa-icon-256.png" />
-
+    <script src="./static/js/index.js"></script>
   </head>
   <body>
     <div id="title-container">
       <img class="logo" src="./assets/logo.png">
       <h2 id="title_explanation">포스트 코로나, 뉴 노멀 시대의 <b>봉사자들을 위한 플랫폼</b></h2>
       <div id="magic_code_area">
-        <input id="enter_magic_code" placeholder="magic code를 입력하세요"></input>
-        <button id ="login-button" class="mdc-button mdc-button--raised material-button" onclick="location.href='./selection.html'">
+        <input class = "passive-button" id="enter-magic-code" placeholder="magic code를 입력하세요" ></input>
+        <button id ="login-button" class="mdc-button mdc-button--raised material-button" onclick="location.href='./selection.html'" disabled>
           <span class="mdc-button__ripple"></span>
           <span class="mdc-button__label" id="login-button__label">로그인</span>
         </button>
