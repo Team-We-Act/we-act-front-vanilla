@@ -9,7 +9,6 @@
 body {
   margin: 0px;
   padding: 0px 50px;
-  background-image: url('./assets/background@3x.png')  no-repeat center center fixed;
   background-size: cover;
 }
 
