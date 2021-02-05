@@ -8,6 +8,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;700&display=swap" rel="stylesheet">
+    <script src="./index.js"></script>
 
   </head>
   <body>
@@ -15,8 +16,8 @@
       <img class="logo" src="./assets/logo.png">
       <h2 id="title_explanation">포스트 코로나, 뉴 노멀 시대의 <b>봉사자들을 위한 플랫폼</b></h2>
       <div id="magic_code_area">
-        <input id="enter_magic_code" placeholder="magic code를 입력하세요"></input>
-        <button id ="login-button" class="mdc-button mdc-button--raised material-button" onclick="location.href='./selection.html'">
+        <input class = "passive-button" id="enter-magic-code" placeholder="magic code를 입력하세요" ></input>
+        <button id ="login-button" class="mdc-button mdc-button--raised material-button" onclick="location.href='./selection.html'" disabled>
           <span class="mdc-button__ripple"></span>
           <span class="mdc-button__label" id="login-button__label">로그인</span>
         </button>
